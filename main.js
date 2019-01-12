@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
+const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -7,10 +8,15 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
-
-  // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow = new BrowserWindow({
+    width: 1280,
+    height: 720,
+    icon: path.join(__dirname, './images/WhatsApp_Logo_7.png')
+  })
+  
+  // and load https://web.whatsapp.com in the window
+  mainWindow.loadURL('https://web.whatsapp.com',
+  {userAgent: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.106 Safari/537.36'})
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -31,6 +37,12 @@ app.on('ready', createWindow)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
+  // clears service worker before close
+  // makes new window register new service worker
+  // otherwise you get the WhatsApp browser version error
+  mainWindow.webContents.unregisterServiceWorker(() => {
+    console.log('Goodbye!!')
+  })
   // On macOS it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
