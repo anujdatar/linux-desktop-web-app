@@ -1,0 +1,28 @@
+{
+  "name": "whatsapp-web-desktop",
+  "version": "1.0.0",
+  "description": "WhatsApp-web wrapped in ElectronJS as a desktop app, for linux",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujdatar/WhatsApp-web-desktop.git"
+  },
+  "keywords": [
+    "WhatsApp",
+    "ElectronJS",
+    "desktop-app-linux"
+  ],
+  "author": "Anuj Datar",
+  "email": "anuj.datar@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anujdatar/WhatsApp-web-desktop/issues"
+  },
+  "homepage": "https://github.com/anujdatar/WhatsApp-web-desktop#readme",
+  "devDependencies": {
+    "electron": "^4.0.1"
+  }
+}
