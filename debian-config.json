@@ -1,0 +1,13 @@
+{
+  "genericName": "Messenger",  
+  "dest": "dist/installers/",
+    "icon": "./images/WhatsApp_Logo_7.png",
+    "categories": [
+      "Internet",
+      "Social",
+      "Messenger"
+    ],
+    "lintianOverrides": [
+      "changelog-file-missing-in-native-package"
+    ]
+  }

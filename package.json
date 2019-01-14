@@ -1,10 +1,15 @@
 {
   "name": "whatsapp-web-desktop",
+  "productName": "WhatsApp Desktop",
   "version": "1.0.0",
-  "description": "WhatsApp-web wrapped in ElectronJS as a desktop app, for linux",
+  "description": "WhatsApp Web Client",
+  "productDescription": "WhatsApp-web wrapped in ElectronJS as a desktop app, for linux",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-linux": "electron-packager . whatsapp-web-desktop --overwrite --asar --platform=linux --arch=x64 --icon=images/WhatsApp_Logo_7.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src release-builds/whatsapp-web-desktop-linux-x64/ --arch amd64 --config debian-config.json",
+    "deb-pack-install": "npm run package-linux && create-debian-installer"
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,8 @@
   },
   "homepage": "https://github.com/anujdatar/WhatsApp-web-desktop#readme",
   "devDependencies": {
-    "electron": "^4.0.1"
+    "electron": "^4.0.1",
+    "electron-installer-debian": "^1.1.0",
+    "electron-packager": "^13.0.1"
   }
 }
