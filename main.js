@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, shell, session} = require('electron')
 const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -11,13 +11,15 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1280,
     height: 720,
-    icon: path.join(__dirname, './images/WhatsApp_Logo_7.png')
+    icon: path.join(__dirname, './images/WhatsApp_Logo_7.png'),
+    webPreferences: {
+      nodeIntegration: false
+    }
   })
   
   // and load https://web.whatsapp.com in the window
   mainWindow.loadURL('https://web.whatsapp.com',
   {userAgent: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.106 Safari/537.36'})
-
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
@@ -33,7 +35,10 @@ function createWindow () {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+app.on('ready', () => {
+  createWindow()
+  defContentPolicy()
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -60,3 +65,28 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+// Limit/disable the creation of additional windows
+app.on('web-contents-created', (event, contents) => {
+  contents.on('new-window', (event, navigationUrl) => {
+    // In this example, we'll ask the operating system
+    // to open this event's url in the default browser.
+    event.preventDefault()
+
+    shell.openExternal(navigationUrl)
+  })
+})
+
+
+// setting a Content-Security-Policy
+function defContentPolicy() {
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    // console.log(details.url)
+    callback({
+      responseHeaders: {
+        ...details.responseHeaders,
+        'Content-Security-Policy': ['script-src \'self\'']
+      }
+    })
+  })
+}

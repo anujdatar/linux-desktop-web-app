@@ -7,9 +7,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "clear-build": "rimraf dist/ release-builds/",
     "package-linux": "electron-packager . whatsapp-web-desktop --overwrite --asar --platform=linux --arch=x64 --icon=images/WhatsApp_Logo_7.png --prune=true --out=release-builds",
     "create-debian-installer": "electron-installer-debian --src release-builds/whatsapp-web-desktop-linux-x64/ --arch amd64 --config debian-config.json",
-    "deb-pack-install": "npm run package-linux && create-debian-installer"
+    "deb-pack-install": "npm run clear-build && npm run package-linux && npm run create-debian-installer"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "electron": "^4.0.1",
     "electron-installer-debian": "^1.1.0",
-    "electron-packager": "^13.0.1"
+    "electron-packager": "^13.0.1",
+    "rimraf": "^2.6.3"
   }
 }

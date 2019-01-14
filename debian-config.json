@@ -1,9 +1,10 @@
 {
-  "genericName": "Messenger",  
+  "genericName": "Messenger",
+  "section": "net",  
   "dest": "dist/installers/",
     "icon": "./images/WhatsApp_Logo_7.png",
     "categories": [
-      "Internet",
+      "Network",
       "Social",
       "Messenger"
     ],
