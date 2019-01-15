@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, shell, session} = require('electron')
+const {app, BrowserWindow, shell, session, Notification} = require('electron')
+// const ipcMain = require('electron').ipcMain;
 const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -14,6 +15,8 @@ function createWindow () {
     icon: path.join(__dirname, './images/WhatsApp_Logo_7.png'),
     webPreferences: {
       nodeIntegration: false
+      // Load `electron-notification-shim` in rendering view.
+			// preload: path.join(__dirname, 'notifier.js')
     }
   })
   
@@ -38,6 +41,7 @@ function createWindow () {
 app.on('ready', () => {
   createWindow()
   defContentPolicy()
+  console.log(Notification.isSupported())
 })
 
 // Quit when all windows are closed.
@@ -90,3 +94,9 @@ function defContentPolicy() {
     })
   })
 }
+
+
+// Listen for notification events.
+// ipcMain.on('notification-shim', (e, msg) => {
+//   console.log(`Title: ${msg.title}, Body: ${msg.options.body}`);
+// });
