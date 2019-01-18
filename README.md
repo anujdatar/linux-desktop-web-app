@@ -1,7 +1,7 @@
 # WhatsApp-web-desktop
 WhatsApp-web wrapped in a desktop app.
 
-Just opens up a desktop webview window to access https://web.whatsapp.com. This app does not change or modify or use any direct code from WhatsApp. Just uses Electron to open a browser window, and serve it as a desktop application since Linux does not have an official release.
+Just opens up a desktop webview window to access https://web.whatsapp.com. This app does not change or modify or use any direct code from WhatsApp. Just uses [Electron](https://github.com/electron/electron) to open a browser window, and serve it as a desktop application since Linux does not have an official release.
 
 ___
 ## Running the dev environment
