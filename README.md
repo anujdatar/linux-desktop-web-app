@@ -6,6 +6,7 @@ Just opens up a desktop webview window to access https://web.whatsapp.com. This 
 Just for personal use, because I hate using Ubuntu's dock, and I'd rather have it open in a window of its own and easily accessible from the dock.
 
 ___
+
 ## Running the dev environment
 ```
 git clone https://github.com/anujdatar/WhatsApp-web-desktop.git
@@ -48,3 +49,7 @@ Uses the following three commands
 This project is licensed under the MIT License - see [LICENSE](https://github.com/anujdatar/WhatsApp-web-desktop/blob/master/LICENSE) for details.
 
 [WhatsApp](https://www.whatsapp.com/), then name, website, icon and code are the intellectual property of [Facebook](facebook.com), or [WhatsApp Inc.](#) or whatever.
+
+
+## P.S.
+This application can also be built for Windows and MacOS. Tested on Windows 10 and Mac OS High Sierra (10.13.6). But WhatsApp has perfectly good desktop apps built with Electron for them. So, I don't know why you would want to, but you can.
