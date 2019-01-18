@@ -1,7 +1,7 @@
 # WhatsApp-web-desktop
 WhatsApp-web wrapped in a desktop app.
 
-Just opens up a desktop webview window to access [https://web.whatsapp.com]. This app does not change or modify or use any direct code from WhatsApp. Just uses Electron to open a browser window, and serve it as a desktop application since Linux does not have an official release.
+Just opens up a desktop webview window to access https://web.whatsapp.com. This app does not change or modify or use any direct code from WhatsApp. Just uses Electron to open a browser window, and serve it as a desktop application since Linux does not have an official release.
 
 ___
 ## Running the dev environment
@@ -19,18 +19,18 @@ npm run deb-pack-install
 Packages app for linux and creates a debian insaller.
 Uses the following three commands
 
-### Packaging
+* **Packaging**
 Uses [Electron Packager](https://github.com/electron-userland/electron-packager/)
 ```
 npm run package-linux
 ```
-### Create installer for debian based systems
+* **Create installer for debian based systems**
 Uses [electron-installer-debian](https://github.com/electron-userland/electron-installer-debian/)
 ```
 npm run create-debian-installer
 ```
 
-### Clean dist and build folders
+* **Clean dist and build folders**
 Uses [rimraf](https://github.com/isaacs/rimraf/)
 ```
 npm run clear-build
