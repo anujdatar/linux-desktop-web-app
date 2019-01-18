@@ -7,7 +7,7 @@ ___
 ## Running the dev environment
 ```
 git clone https://github.com/anujdatar/WhatsApp-web-desktop.git
-cd WhatsAoo-web-desktop
+cd WhatsApp-web-desktop
 npm install
 npm start
 ```
