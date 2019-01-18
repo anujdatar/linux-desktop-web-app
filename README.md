@@ -4,8 +4,8 @@ WhatsApp-web wrapped in a desktop app.
 Just opens up a desktop webview window to access https://web.whatsapp.com. This app does not change or modify or use any direct code from WhatsApp. Just uses [Electron](https://github.com/electron/electron) to open a browser window, and serve it as a desktop application since Linux does not have an official release, and WhatsApp-web does not work on Chromium.
 
 Just for personal use, because I hate using Ubuntu's dock, and I'd rather have it open in a window of its own and easily accessible from the dock.
-
 ___
+
 
 ## Running the dev environment
 ```
@@ -42,8 +42,10 @@ Uses the following three commands
   npm run clear-build
   ```
 
+
 ## Author
 * Anuj Datar - [GitHub](https://github.com/anujdatar/)
+
 
 ## License
 This project is licensed under the MIT License - see [LICENSE](https://github.com/anujdatar/WhatsApp-web-desktop/blob/master/LICENSE) for details.
