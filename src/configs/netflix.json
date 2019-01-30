@@ -1,0 +1,30 @@
+{
+  "genericName": "video",
+  "section": "media",
+  "icon": "./src/images/netflix.png",
+  "categories": [
+    "Media",
+    "Network",
+    "Video",
+    "Streaming"
+  ],
+  "webLink":"https://www.netflix.com",
+  "name":"netflix-desktop",
+  "productName": "Netflix",
+  "description": "Netflix desktop app for Linux",
+  "productDescription": "Netflix.com wrapped in Electron as a desktop app, for Linux",
+  "scripts": {
+    "app-config": "node ./src/app-config.js",
+    "start": "electron .",
+    "clear-build": "rimraf dist/ release-builds/",
+    "package-linux": "electron-packager . netflix-desktop --overwrite --asar --platform=linux --arch=x64 --icon=./src/images/netflix.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src release-builds/netflix-desktop-linux-x64/ --arch amd64 --config debian-config.json",
+    "deb-pack-install": "npm run clear-build && npm run package-linux && npm run create-debian-installer"
+  },
+  "keywords": [
+    "Netflix",
+    "Electron",
+    "desktop-app",
+    "linux"
+  ]
+}

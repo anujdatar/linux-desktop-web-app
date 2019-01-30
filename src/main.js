@@ -1,10 +1,12 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, shell, session} = require('electron')
 const path = require('path')
+const appConfig = require('../app-config.json')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+console.log(appConfig.webLink)
 
 function createWindow () {
   // Create the browser window.
@@ -18,8 +20,9 @@ function createWindow () {
   })
   
   // and load https://web.whatsapp.com in the window
-  mainWindow.loadURL('https://web.whatsapp.com',
+  mainWindow.loadURL(appConfig.webLink,
   {userAgent: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.106 Safari/537.36'})
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
@@ -81,7 +84,7 @@ app.on('web-contents-created', (event, contents) => {
 // setting a Content-Security-Policy
 function defContentPolicy() {
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
-    console.log(details.url)
+    // console.log(details.url)
     callback({
       responseHeaders: {
         ...details.responseHeaders,

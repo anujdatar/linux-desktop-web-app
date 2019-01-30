@@ -1,0 +1,29 @@
+{
+  "genericName": "messenger",
+  "section": "net",
+  "icon": "./src/images/whatsapp.png",
+  "categories": [
+    "Network",
+    "Social",
+    "Messenger"
+  ],
+  "webLink":"https://www.web-whatsapp.com",
+  "name":"whatsapp-web-desktop",
+  "productName": "WhatsApp",
+  "description": "WhatsApp Web desktop app for Linux",
+  "productDescription": "WhatsApp-web wrapped in Electron as a desktop app, for Linux",
+  "scripts": {
+    "app-config": "node ./src/app-config.js",
+    "start": "electron .",
+    "clear-build": "rimraf dist/ release-builds/",
+    "package-linux": "electron-packager . whatsapp-web-desktop --overwrite --asar --platform=linux --arch=x64 --icon=./src/images/whatsapp.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src release-builds/whatsapp-web-desktop-linux-x64/ --arch amd64 --config debian-config.json",
+    "deb-pack-install": "npm run clear-build && npm run package-linux && npm run create-debian-installer"
+  },
+  "keywords": [
+    "WhatsApp",
+    "Electron",
+    "desktop-app",
+    "linux"
+  ]
+}

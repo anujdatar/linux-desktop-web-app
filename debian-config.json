@@ -1,14 +1,14 @@
 {
-  "genericName": "Messenger",
-  "section": "net",  
-  "dest": "dist/installers/",
-    "icon": "./src/images/WhatsApp_Logo_7.png",
-    "categories": [
-      "Network",
-      "Social",
-      "Messenger"
-    ],
-    "lintianOverrides": [
-      "changelog-file-missing-in-native-package"
-    ]
-  }
+  "genericName": "music",
+  "section": "media",
+  "icon": "./src/images/pandora.png",
+  "categories": [
+    "Media",
+    "Network",
+    "Music",
+    "Streaming"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ]
+}

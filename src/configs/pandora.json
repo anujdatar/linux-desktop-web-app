@@ -1,0 +1,30 @@
+{
+  "genericName": "music",
+  "section": "media",
+  "icon": "./src/images/pandora.png",
+  "categories": [
+    "Media",
+    "Network",
+    "Music",
+    "Streaming"
+  ],
+  "webLink":"https://www.pandora.com",
+  "name":"pandora-desktop",
+  "productName": "Pandora",
+  "description": "Pandora desktop app for Linux",
+  "productDescription": "Pandora.com wrapped in Electron as a desktop app, for Linux",
+  "scripts": {
+    "app-config": "node ./src/app-config.js",
+    "start": "electron .",
+    "clear-build": "rimraf dist/ release-builds/",
+    "package-linux": "electron-packager . pandora-desktop --overwrite --asar --platform=linux --arch=x64 --icon=./src/images/pandora.png --prune=true --out=release-builds",
+    "create-debian-installer": "electron-installer-debian --src release-builds/pandora-desktop-linux-x64/ --arch amd64 --config debian-config.json",
+    "deb-pack-install": "npm run clear-build && npm run package-linux && npm run create-debian-installer"
+  },
+  "keywords": [
+    "Pandora",
+    "Electron",
+    "desktop-app",
+    "linux"
+  ]
+}

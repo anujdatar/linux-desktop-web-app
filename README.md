@@ -1,16 +1,18 @@
-# WhatsApp-web-desktop
-WhatsApp-web wrapped in a desktop app.
+# linux-desktop-web-app
+ A web-app wrapped in Electron to open as a desktop app. Since linux doesn't have a lot of apps.
 
-Just opens up a desktop webview window to access https://web.whatsapp.com. This app does not change or modify or use any direct code from WhatsApp. Just uses [Electron](https://github.com/electron/electron) to open a browser window, and serve it as a desktop application since Linux does not have an official release, and WhatsApp-web does not work on Chromium.
+This app does not modify or use any direct code of any website/webapp. Just uses [Electron](https://github.com/electron/electron) to open a browser window, and serve it as a desktop application since Linux does not have an official releases of some apps.
 
-Just for personal use, because I hate using Ubuntu's dock, and I'd rather have it open in a window of its own and easily accessible from the dock.
+Started as a project because WhatsApp does not work directly on Chromium. And, because I hate using Ubuntu's dock, and I'd rather have it open in a window of its own and easily accessible from the dock.
+
+Tested for [Whatsapp](https://web.whatsapp.com/).
 ___
 
 
 ## Running the dev environment
 ```
-git clone https://github.com/anujdatar/WhatsApp-web-desktop.git
-cd WhatsApp-web-desktop
+git clone https://github.com/anujdatar/linux-desktop-web-app
+cd linux-desktop-web-app
 npm install
 npm start
 ```
@@ -48,10 +50,13 @@ Uses the following three commands
 
 
 ## License
-This project is licensed under the MIT License - see [LICENSE](https://github.com/anujdatar/WhatsApp-web-desktop/blob/master/LICENSE) for details.
+This project is licensed under the MIT License - see [LICENSE](https://github.com/anujdatar/linux-desktop-web-app/blob/master/LICENSE) for details.
 
 [WhatsApp](https://www.whatsapp.com/), then name, website, icon and code are the intellectual property of [Facebook](facebook.com), or [WhatsApp Inc.](#) or whatever.
 
 
 ## P.S.
 This application can also be built for Windows and MacOS. Tested on Windows 10 and Mac OS High Sierra (10.13.6). But WhatsApp has perfectly good desktop apps built with Electron for them. So, I don't know why you would want to, but you can.
+
+## TODO
+Netflix, Pandora, etc..

@@ -1,11 +1,12 @@
 {
-  "name": "whatsapp-web-desktop",
-  "productName": "WhatsApp Desktop",
+  "name": "linux-desktop-web-app",
+  "productName": "Linux Desktop App",
   "version": "1.0.0",
-  "description": "WhatsApp Web Client for Linux",
-  "productDescription": "WhatsApp-web wrapped in ElectronJS as a desktop app, for Linux",
+  "description": "WebApp Electron Client for Linux",
+  "productDescription": "WebApp wrapped in ElectronJS as a desktop app, for Linux",
   "main": "src/main.js",
   "scripts": {
+    "app-config": "node ./src/app-config.js",
     "start": "electron .",
     "clear-build": "rimraf dist/ release-builds/",
     "package-linux": "electron-packager . whatsapp-web-desktop --overwrite --asar --platform=linux --arch=x64 --icon=images/WhatsApp_Logo_7.png --prune=true --out=release-builds",
@@ -14,24 +15,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anujdatar/WhatsApp-web-desktop.git"
+    "url": "git+https://github.com/anujdatar/linux-desktop-web-app"
   },
   "keywords": [
     "WhatsApp",
     "Electron",
-    "desktop-app-linux"
+    "desktop-app",
+    "linux"
   ],
   "author": "Anuj Datar",
   "email": "anuj.datar@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anujdatar/WhatsApp-web-desktop/issues"
+    "url": "https://github.com/anujdatar/linux-desktop-web-app/issues"
   },
-  "homepage": "https://github.com/anujdatar/WhatsApp-web-desktop#readme",
+  "homepage": "https://github.com/anujdatar/linux-desktop-web-app#readme",
   "devDependencies": {
     "electron": "^4.0.1",
     "electron-installer-debian": "^1.1.0",
     "electron-packager": "^13.0.1",
+    "inquirer": "^6.2.1",
     "rimraf": "^2.6.3"
   },
   "dependencies": {}
