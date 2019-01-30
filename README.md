@@ -52,7 +52,8 @@ Uses the following three commands
 ## License
 This project is licensed under the MIT License - see [LICENSE](https://github.com/anujdatar/linux-desktop-web-app/blob/master/LICENSE) for details.
 
-[WhatsApp](https://www.whatsapp.com/), then name, website, icon and code are the intellectual property of [Facebook](https://www.facebook.com), or [WhatsApp Inc.](https://www.whatsapp.com/) or whatever.
+
+**Netflix**, **Pandora**, **Volumio** and **WhatsApp**, the names, websites, images/icons and code are the intellectual properties of [Netflix Inc.](https://www.netflix.com/), [Pandora Media Inc.](https://www.pandora.com/), [Michelangelo Guarise](https://volumio.org/), and [Facebook Inc.](https://www.facebook.com/) or [WhatsApp Inc.](https://www.whatsapp.com/) respectively.
 
 
 ## P.S.
