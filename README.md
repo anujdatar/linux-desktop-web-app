@@ -5,7 +5,7 @@ This app does not modify or use any direct code of any website/webapp. Just uses
 
 Started as a project because WhatsApp does not work directly on Chromium. And, because I hate using Ubuntu's dock, and I'd rather have it open in a window of its own and easily accessible from the dock.
 
-Tested for [Whatsapp](https://web.whatsapp.com/).
+Tested for [Whatsapp](https://web.whatsapp.com/), [Netflix](https://www.netflix.com), [Pandora](https://www.pandora.com) and [Volumio](http://volumio.local) local remote page.
 ___
 
 
