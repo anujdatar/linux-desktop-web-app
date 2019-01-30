@@ -15,6 +15,7 @@
   "productDescription": "Netflix.com wrapped in Electron as a desktop app, for Linux",
   "scripts": {
     "app-config": "node ./src/app-config.js",
+    "reset-defaults": "node ./src/default-configs.js",
     "start": "electron .",
     "clear-build": "rimraf dist/ release-builds/",
     "package-linux": "electron-packager . netflix-desktop --overwrite --asar --platform=linux --arch=x64 --icon=./src/images/netflix.png --prune=true --out=release-builds",

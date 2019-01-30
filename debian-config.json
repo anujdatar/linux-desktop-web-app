@@ -1,12 +1,11 @@
 {
-  "genericName": "music",
-  "section": "media",
-  "icon": "./src/images/pandora.png",
+  "genericName": "messenger",
+  "section": "net",
+  "icon": "./src/images/whatsapp.png",
   "categories": [
-    "Media",
     "Network",
-    "Music",
-    "Streaming"
+    "Social",
+    "Messenger"
   ],
   "lintianOverrides": [
     "changelog-file-missing-in-native-package"

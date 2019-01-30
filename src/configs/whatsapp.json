@@ -7,13 +7,14 @@
     "Social",
     "Messenger"
   ],
-  "webLink":"https://www.web-whatsapp.com",
+  "webLink":"https://web.whatsapp.com",
   "name":"whatsapp-web-desktop",
   "productName": "WhatsApp",
   "description": "WhatsApp Web desktop app for Linux",
   "productDescription": "WhatsApp-web wrapped in Electron as a desktop app, for Linux",
   "scripts": {
     "app-config": "node ./src/app-config.js",
+    "reset-defaults": "node ./src/default-configs.js",
     "start": "electron .",
     "clear-build": "rimraf dist/ release-builds/",
     "package-linux": "electron-packager . whatsapp-web-desktop --overwrite --asar --platform=linux --arch=x64 --icon=./src/images/whatsapp.png --prune=true --out=release-builds",

@@ -13,7 +13,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1280,
     height: 720,
-    icon: path.join(__dirname, './images/WhatsApp_Logo_7.png'),
+    icon: path.join(__dirname, '../' ,appConfig.appIcon),
     webPreferences: {
       nodeIntegration: false
     }

@@ -67,6 +67,7 @@ function updateDebianConfig (data) {
 
 function updateAppConfig (data) {  
   appConfData.webLink = data.webLink
+  appConfData.appIcon = data.icon
 
   fs.writeFileSync(appConfFile, JSON.stringify(appConfData, null, 2))
 }
