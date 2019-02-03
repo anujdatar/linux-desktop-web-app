@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:8.11.4
     steps:
       - checkout
-       run: 
+      - run: 
           name: update-npm
           command: 'sudo npm install -g npm@latest'
       - restore_cache: # special step to restore the dependency cache
