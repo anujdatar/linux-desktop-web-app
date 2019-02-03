@@ -1,6 +1,8 @@
 # linux-desktop-web-app
  A web-app wrapped in Electron to open as a desktop app. Since linux doesn't have a lot of apps.
-
+ [![CircleCI](https://circleci.com/gh/anujdatar/linux-desktop-web-app.svg?style=svg)](https://circleci.com/gh/anujdatar/linux-desktop-web-app)
+ 
+___
 This app does not modify or use any direct code of any website/webapp. Just uses [Electron](https://github.com/electron/electron) to open a browser window, and serve it as a desktop application since Linux does not have an official releases of some apps.
 
 Started as a project because WhatsApp does not work directly on Chromium Browser. And, because I hate using Ubuntu's dock, and I'd rather have it open in a window of its own and easily accessible from the dock.
