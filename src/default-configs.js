@@ -17,9 +17,9 @@ const defaultData = require(defaultConf)
 
 
 // const data = JSON.parse(fs.readFileSync(appConfig))
-updatePackageJson(data)
-updateDebianConfig(data)
-updateAppConfig(data)
+updatePackageJson(defaultData)
+updateDebianConfig(defaultData)
+updateAppConfig(defaultData)
 
 console.log(defaultData)
 

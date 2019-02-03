@@ -1,12 +1,9 @@
 {
-  "genericName": "messenger",
+  "genericName": "desktop-web-app",
   "section": "net",
-  "icon": "./src/images/whatsapp.png",
-  "categories": [
-    "Network",
-    "Social",
-    "Messenger"
-  ],
+  "dest": "dist/installers/",
+  "icon": "./src/images/logo.png",
+  "categories": [],
   "lintianOverrides": [
     "changelog-file-missing-in-native-package"
   ]

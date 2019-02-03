@@ -20,7 +20,8 @@
     "clear-build": "rimraf dist/ release-builds/",
     "package-linux": "electron-packager . pandora-desktop --overwrite --asar --platform=linux --arch=x64 --icon=./src/images/pandora.png --prune=true --out=release-builds",
     "create-debian-installer": "electron-installer-debian --src release-builds/pandora-desktop-linux-x64/ --arch amd64 --config debian-config.json",
-    "deb-pack-install": "npm run clear-build && npm run package-linux && npm run create-debian-installer"
+    "deb-pack-install": "npm run clear-build && npm run package-linux && npm run create-debian-installer",
+    "build": "npm run app-config && npm run deb-pack-install && npm run reset-defaults"
   },
   "keywords": [
     "Pandora",
