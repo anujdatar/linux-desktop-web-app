@@ -1,9 +1,14 @@
 {
-  "genericName": "desktop-web-app",
-  "section": "net",
+  "genericName": "video",
+  "section": "media",
   "dest": "dist/installers/",
-  "icon": "./src/images/logo.png",
-  "categories": [],
+  "icon": "./src/images/netflix.png",
+  "categories": [
+    "Media",
+    "Network",
+    "Video",
+    "Streaming"
+  ],
   "lintianOverrides": [
     "changelog-file-missing-in-native-package"
   ]
