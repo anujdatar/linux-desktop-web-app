@@ -37,7 +37,7 @@ function configMenuPrompt (filesNames) {
     .then(answers => {
       // console.log(JSON.stringify(answers, null, 2))
       const appConfig = path.join(__dirname, '/configs/', answers.App)
-      console.log(appConfig)
+      // console.log(appConfig)
       const data = JSON.parse(fs.readFileSync(appConfig))
       updatePackageJson(packageFile, packageData, data)
       updateDebianConfig(debConfFile, debConfData, data)
