@@ -21,7 +21,7 @@ updatePackageJson(defaultData)
 updateDebianConfig(defaultData)
 updateAppConfig(defaultData)
 
-console.log(defaultData)
+// console.log(defaultData)
 
 function updatePackageJson (data) {
   packageData.name = data.name
