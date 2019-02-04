@@ -4,7 +4,7 @@ const inquirer = require('inquirer')
 
 const packageFile = path.join(__dirname, '../package.json')
 const debConfFile = path.join(__dirname, '../debian-config.json')
-const appConfFile = path.join(__dirname, '../', 'app-config.json')
+const appConfFile = path.join(__dirname, '../app-config.json')
 
 const packageData = require(packageFile)
 const debConfData = require(debConfFile)
@@ -39,35 +39,41 @@ function configMenuPrompt (filesNames) {
       const appConfig = path.join(__dirname, '/configs/', answers.App)
       console.log(appConfig)
       const data = JSON.parse(fs.readFileSync(appConfig))
-      updatePackageJson(data)
-      updateDebianConfig(data)
-      updateAppConfig(data)
+      updatePackageJson(packageFile, packageData, data)
+      updateDebianConfig(debConfFile, debConfData, data)
+      updateAppConfig(appConfFile, appConfData, data)
     })
 }
 
-function updatePackageJson (data) {
-  packageData.name = data.name
-  packageData.productName = data.productName
-  packageData.description = data.description
-  packageData.productDescription = data.productDescription
-  packageData.scripts = data.scripts
-  packageData.keywords = data.keywords
+function updatePackageJson (fileName, originalData, newData) {
+  originalData.name = newData.name
+  originalData.productName = newData.productName
+  originalData.description = newData.description
+  originalData.productDescription = newData.productDescription
+  originalData.scripts = newData.scripts
+  originalData.keywords = newData.keywords
 
-  fs.writeFileSync(packageFile, JSON.stringify(packageData, null, 2))
+  fs.writeFileSync(fileName, JSON.stringify(originalData, null, 2))
 }
 
-function updateDebianConfig (data) {  
-  debConfData.genericName = data.genericName
-  debConfData.section = data.section
-  debConfData.icon = data.icon
-  debConfData.categories = data.categories
+function updateDebianConfig (fileName, originalData, newData) {  
+  originalData.genericName = newData.genericName
+  originalData.section = newData.section
+  originalData.icon = newData.icon
+  originalData.categories = newData.categories
 
-  fs.writeFileSync(debConfFile, JSON.stringify(debConfData, null, 2))
+  fs.writeFileSync(fileName, JSON.stringify(originalData, null, 2))
 }
 
-function updateAppConfig (data) {  
-  appConfData.webLink = data.webLink
-  appConfData.appIcon = data.icon
+function updateAppConfig (fileName, originalData, newData) {  
+  originalData.webLink = newData.webLink
+  originalData.appIcon = newData.icon
 
-  fs.writeFileSync(appConfFile, JSON.stringify(appConfData, null, 2))
+  fs.writeFileSync(fileName, JSON.stringify(originalData, null, 2))
+}
+
+module.exports = {
+  updatePackageJson,
+  updateDebianConfig,
+  updateAppConfig
 }
