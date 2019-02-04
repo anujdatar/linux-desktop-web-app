@@ -1,10 +1,10 @@
 # Web app as a desktop app for linux
-(linux-desktop-web-app)
-A web-app wrapped in Electron to open as a desktop app. Since linux doesn't have a lot of apps.
- 
-[![CircleCI](https://circleci.com/gh/anujdatar/linux-desktop-web-app.svg?style=shield)](https://circleci.com/gh/anujdatar/linux-desktop-web-app)
+  (linux-desktop-web-app)
 
-[![CodeFactor](https://www.codefactor.io/repository/github/anujdatar/linux-desktop-web-app/badge)](https://www.codefactor.io/repository/github/anujdatar/linux-desktop-web-app)
+  A web-app wrapped in Electron to open as a desktop app. Since linux doesn't have a lot of apps.
+ 
+  [![CircleCI](https://circleci.com/gh/anujdatar/linux-desktop-web-app.svg?style=shield)](https://circleci.com/gh/anujdatar/linux-desktop-web-app)
+  [![CodeFactor](https://www.codefactor.io/repository/github/anujdatar/linux-desktop-web-app/badge)](https://www.codefactor.io/repository/github/anujdatar/linux-desktop-web-app)
  
 ___
 This app does not modify or use any direct code of any website/webapp. Just uses [Electron](https://github.com/electron/electron) to open a browser window, and serve it as a desktop application since Linux does not have an official releases of some apps.
