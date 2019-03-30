@@ -1,12 +1,13 @@
 {
-  "genericName": "music",
-  "section": "media",
+  "genericName": "Internet Radio",
+  "section": "Audio",
   "icon": "./src/images/pandora.png",
   "categories": [
+    "Audio",
+    "Player",
     "Media",
-    "Network",
-    "Music",
-    "Streaming"
+    "Multimedia",
+    "AudioVideo"
   ],
   "webLink":"https://www.pandora.com",
   "name":"pandora-desktop",
