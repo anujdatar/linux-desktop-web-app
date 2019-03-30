@@ -1,10 +1,11 @@
 {
-  "genericName": "messenger",
-  "section": "net",
+  "genericName": "Messenger",
+  "section": "Chat",
   "icon": "./src/images/whatsapp.png",
   "categories": [
-    "Network",
     "Social",
+    "Chat",
+    "Network",
     "Messenger"
   ],
   "webLink":"https://web.whatsapp.com",

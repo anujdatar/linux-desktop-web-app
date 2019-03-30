@@ -1,11 +1,13 @@
 {
-  "genericName": "remote-control",
-  "section": "media",
+  "genericName": "Media Remote",
+  "section": "Audio",
   "icon": "./src/images/volumio.png",
   "categories": [
+    "Music",
     "Media",
-    "Network",
-    "Control"
+    "Multimedia",
+    "AudioVideo",
+    "Network"
   ],
   "webLink":"http://volumio.local",
   "name":"volumio-remote",

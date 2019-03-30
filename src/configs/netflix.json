@@ -1,12 +1,13 @@
 {
-  "genericName": "video",
-  "section": "media",
+  "genericName": "Video Streaming",
+  "section": "Video",
   "icon": "./src/images/netflix.png",
   "categories": [
-    "Media",
-    "Network",
+    "Multimedia",
     "Video",
-    "Streaming"
+    "Player",
+    "Media",
+    "AudioVideo"
   ],
   "webLink":"https://www.netflix.com",
   "name":"netflix-desktop",

@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, shell, session} = require('electron')
+const {app, BrowserWindow, shell} = require('electron')
 const path = require('path')
 const appConfig = require('../app-config.json')
 
@@ -19,9 +19,10 @@ function createWindow () {
     }
   })
   
-  // and load https://web.whatsapp.com in the window
-  mainWindow.loadURL(appConfig.webLink,
-  {userAgent: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.106 Safari/537.36'})
+  // and load web-app link in the window
+  // mainWindow.loadURL(appConfig.webLink,
+  // {userAgent: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.106 Safari/537.36'})
+  mainWindow.loadURL(appConfig.webLink)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -82,14 +83,14 @@ app.on('web-contents-created', (event, contents) => {
 
 
 // setting a Content-Security-Policy
-function defContentPolicy() {
-  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
-    // console.log(details.url)
-    callback({
-      responseHeaders: {
-        ...details.responseHeaders,
-        'Content-Security-Policy': ["script-src 'self'"]
-      }
-    })
-  })
-}
+// function defContentPolicy() {
+//   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+//     // console.log(details.url)
+//     callback({
+//       responseHeaders: {
+//         ...details.responseHeaders,
+//         'Content-Security-Policy': ["script-src 'self'"]
+//       }
+//     })
+//   })
+// }
